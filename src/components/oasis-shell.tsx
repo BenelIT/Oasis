@@ -46,11 +46,13 @@ export function Header() {
               </Link>
             ))}
           </nav>
+
           <Button asChild variant="warm" className="header-donate">
             <Link to="/participa">
-              <Heart size={15} /> Participa / Dona
+              <Heart size={15} /> Participa
             </Link>
           </Button>
+
           <Button
             className="mobile-menu"
             variant="ghost"
@@ -107,7 +109,7 @@ export function Footer() {
               <Link to="/nosotros">Sobre nosotros</Link>
               <Link to="/parque">El parque y sus experiencias</Link>
               <Link to="/conservacion">Conservación y ADVC</Link>
-              <Link to="/blog">Novedades</Link>
+              {/*TODO: <Link to="/blog">Novedades</Link>*/}
             </div>
           </div>
           <div>
@@ -116,7 +118,7 @@ export function Footer() {
               <Link to="/convocatorias">Voluntariado y convocatorias</Link>
               <Link to="/eventos">Eventos y cursos</Link>
               <Link to="/investigacion">Investigación</Link>
-              <Link to="/participa">Participa / Dona</Link>
+              <Link to="/participa">Participa</Link>
             </div>
           </div>
           <div>
