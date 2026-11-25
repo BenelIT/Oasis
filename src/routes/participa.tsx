@@ -112,7 +112,6 @@ function Page() {
           src={river}
           width="1920"
           height="1024"
-          alt="Paisaje ilustrativo de un río entre vegetación tropical de Chiapas"
           fetchPriority="high"
         />
         <div className="absolute inset-0 -z-10 bg-black/60" aria-hidden="true" />
@@ -140,7 +139,6 @@ function Page() {
                 </Link>
               </Button>
             </div>
-            <p className="mt-6 text-xs text-white/75">Paisaje ilustrativo</p>
           </div>
         </div>
       </section>
@@ -270,7 +268,6 @@ function Page() {
             height="768"
             loading="lazy"
             decoding="async"
-            alt="Nutria de río, imagen ilustrativa"
           />
         </div>
       </section>

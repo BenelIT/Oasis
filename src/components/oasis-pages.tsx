@@ -186,11 +186,7 @@ export function InformationPage({ pageKey }: { pageKey: PageKey }) {
             <figure>
               <img
                 src={image}
-                alt={
-                  page.image === "otter"
-                    ? "Imagen ilustrativa de una nutria de río"
-                    : "Paisaje natural ilustrativo de Chiapas"
-                }
+
                 width="1024"
                 height="768"
                 className="aspect-[4/3] w-full rounded-xl object-cover"

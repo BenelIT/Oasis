@@ -150,7 +150,6 @@ function Page() {
           src={otterPhoto}
           width="1024"
           height="768"
-          alt="Nutria de río, imagen ilustrativa"
           fetchPriority="high"
         />
         <div className="absolute inset-0 -z-10 bg-black/60" aria-hidden="true" />
@@ -179,7 +178,6 @@ function Page() {
                 </Link>
               </Button>
             </div>
-            <p className="mt-6 text-xs text-white/75">Imagen ilustrativa</p>
           </div>
         </div>
       </section>

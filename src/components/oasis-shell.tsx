@@ -71,7 +71,7 @@ export function Header() {
                 </Link>
               ))}
               <Link to="/participa" onClick={() => setOpen(false)}>
-                Participa / Dona
+                Participa
               </Link>
               <Link to="/contacto" onClick={() => setOpen(false)}>
                 Contacto

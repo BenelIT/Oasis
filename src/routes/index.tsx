@@ -126,7 +126,6 @@ const experiences = [
     image: otterPhoto,
     w: 1024,
     h: 768,
-    alt: "Nutria de río, imagen ilustrativa",
     tag: "Conoce",
     tagIcon: Bird,
     title: "Vida que merece cuidado",
@@ -138,7 +137,7 @@ const experiences = [
     image: river,
     w: 1920,
     h: 1024,
-    alt: "Vegetación ribereña, paisaje ilustrativo",
+    alt: "Vegetación ribereña",
     tag: "Participa",
     tagIcon: Sprout,
     title: "Sembramos comunidad",
@@ -196,7 +195,6 @@ function Index() {
           src={river}
           width="1920"
           height="1024"
-          alt="Paisaje ilustrativo de un río entre vegetación tropical de Chiapas"
           fetchPriority="high"
         />
 
@@ -272,9 +270,6 @@ function Index() {
               </div>
             </div>
           </div>
-
-          {/* Crédito de imagen */}
-          <p className="pb-4 text-xs text-white/60">Paisaje ilustrativo</p>
         </div>
       </section>
 
@@ -363,7 +358,6 @@ function Index() {
             height="768"
             loading="lazy"
             decoding="async"
-            alt="Imagen ilustrativa de una nutria junto al río"
           />
           <div>
             <p className="mb-2 text-sm font-medium text-primary">Nuestro compromiso</p>
@@ -408,35 +402,29 @@ function Index() {
             }
           />
           <div className="grid gap-8 md:grid-cols-3 md:gap-6">
-            {experiences.map(
-              ({ to, image, w, h, alt, tag, tagIcon: TagIcon, title, text, cta }) => (
-                <Link key={title} to={to} className={`group block ${focusRing}`}>
-                  <div className="relative overflow-hidden rounded-xl">
-                    <img
-                      className="aspect-[4/3] w-full object-cover"
-                      src={image}
-                      width={w}
-                      height={h}
-                      loading="lazy"
-                      decoding="async"
-                      alt={alt}
-                    />
-                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-2.5 py-1 text-xs font-medium">
-                      <TagIcon size={12} aria-hidden="true" /> {tag}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-lg font-semibold leading-snug">{title}</h3>
-                  <p className="mt-2 leading-relaxed text-muted-foreground">{text}</p>
-                  <span className="mt-3 inline-flex items-center gap-1.5 font-medium text-primary">
-                    {cta} <ArrowUpRight size={15} aria-hidden="true" />
+            {experiences.map(({ to, image, w, h, tag, tagIcon: TagIcon, title, text, cta }) => (
+              <Link key={title} to={to} className={`group block ${focusRing}`}>
+                <div className="relative overflow-hidden rounded-xl">
+                  <img
+                    className="aspect-[4/3] w-full object-cover"
+                    src={image}
+                    width={w}
+                    height={h}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-2.5 py-1 text-xs font-medium">
+                    <TagIcon size={12} aria-hidden="true" /> {tag}
                   </span>
-                </Link>
-              ),
-            )}
+                </div>
+                <h3 className="mt-4 text-lg font-semibold leading-snug">{title}</h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{text}</p>
+                <span className="mt-3 inline-flex items-center gap-1.5 font-medium text-primary">
+                  {cta} <ArrowUpRight size={15} aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
           </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            Imágenes ilustrativas. Consulta la disponibilidad antes de planear tu visita.
-          </p>
         </div>
       </section>
 
